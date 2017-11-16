@@ -11,8 +11,8 @@
                     <a class="no-underline text-grey-darker pr-3 text-sm" href="{{ url('/login') }}">Login</a>
                     <a class="no-underline text-grey-darker text-sm" href="{{ url('/register') }}">Register</a>
                 @else
-                    <a href="#" class="text-grey-darker text-sm pr-4 no-underline">Conteudo</a>
-                    <a href="#" class="text-grey-darker text-sm pr-4 no-underline">Manifesto</a>
+                    <a href="{{ route('home') }}" class="text-grey-darker text-sm pr-4 no-underline">Conteudo</a>
+                    <a href="{{ route('manifest') }}" class="text-grey-darker text-sm pr-4 no-underline">Manifesto</a>
 
                     <span class="text-grey-darker text-sm pr-4 font-bold">{{ Auth::user()->name }}</span>
 

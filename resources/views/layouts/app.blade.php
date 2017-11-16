@@ -17,7 +17,7 @@
     <div id="app">
         @include('layouts.navbar')
 
-        @auth
+        @if (auth()->check() && ! isset($manifest))
             <div class="container mx-auto mb-8">
                 <div class="flex -mx-4">
                     <div class="md:w-3/4 mx-4">
@@ -36,7 +36,7 @@
             </div>
         @else
             @yield('content')
-        @endauth
+        @endif
     </div>
 
     <!-- Scripts -->
