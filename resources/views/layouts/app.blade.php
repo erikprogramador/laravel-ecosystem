@@ -13,37 +13,30 @@
     <!-- Styles -->
     <link href="{{ asset('css/main.css') }}" rel="stylesheet">
 </head>
-<body class="bg-brand-lightest h-screen">
+<body class="bg-grey-lightest h-screen">
     <div id="app">
-        <nav class="bg-white h-12 shadow mb-8">
-            <div class="container mx-auto h-full">
-                <div class="flex items-center justify-center h-12">
-                    <div class="mr-6">
-                        <a href="{{ url('/') }}" class="no-underline">
-                            {{ config('app.name', 'Laravel') }}
-                        </a>
-                    </div>
-                    <div class="flex-1 text-right">
-                        @guest
-                            <a class="no-underline hover:underline text-grey-darker pr-3 text-sm" href="{{ url('/login') }}">Login</a>
-                            <a class="no-underline hover:underline text-grey-darker text-sm" href="{{ url('/register') }}">Register</a>
-                        @else
-                            <span class="text-grey-darker text-sm pr-4">{{ Auth::user()->name }}</span>
+        @include('layouts.navbar')
 
-                            <a href="{{ route('logout') }}"
-                                class="no-underline hover:underline text-grey-darker text-sm"
-                                onclick="event.preventDefault();
-                                document.getElementById('logout-form').submit();">Logout</a>
-                            <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
-                                {{ csrf_field() }}
-                            </form>
-                        @endguest
+        @auth
+            <div class="container mx-auto mb-8">
+                <div class="flex -mx-4">
+                    <div class="md:w-3/4 mx-4">
+                       @yield('content') 
+                    </div>
+                    <div class="md:w-1/4 mx-4">
+                        <a href="{{ route('home') }}" class="no-underline block bg-indigo px-4 py-3 text-center rounded text-white hover:bg-indigo-dark shadow-md">Inicio</a>
+                        <div class="mt-4 bg-white rounded overflow-hidden shadow-md">
+                            <a href="topic" class="block p-4 bg-indigo border-b border-indigo-lighest no-underline text-white">Topic 1</a>
+                            @for ($i = 0; $i <= 10; $i++)
+                                <a href="topic" class="block p-4 border-b border-indigo-lighest no-underline text-grey-dark hover:text-grey-darkest">Topic {{ $i }}</a>
+                            @endfor
+                        </div>
                     </div>
                 </div>
             </div>
-        </nav>
-
-        @yield('content')
+        @else
+            @yield('content')
+        @endauth
     </div>
 
     <!-- Scripts -->
