@@ -13,8 +13,8 @@
 
 Route::view('/', 'welcome');
 Route::get('manifesto', 'ManifestController@show')->name('manifest');
-
 Route::get('author', 'AuthorController@show')->name('author');
+Route::get('references', 'ReferencesController@index')->name('references');
 
 Route::get('topic/{topic}', 'TopicController@show')->name('topic');
 
