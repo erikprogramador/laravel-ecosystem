@@ -16,6 +16,8 @@ Route::get('manifesto', 'ManifestController@show')->name('manifest');
 
 Route::get('author', 'AuthorController@show')->name('author');
 
+Route::get('topic/{topic}', 'TopicController@show')->name('topic');
+
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');

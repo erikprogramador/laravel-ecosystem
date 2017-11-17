@@ -33,10 +33,10 @@ class TopicsTableSeeder extends Seeder
     protected function second()
     {
         Topic::create([
-            'slug' => 'welcome',
+            'slug' => 'welcome-2',
             'title' => 'Bem vindo',
-            'time' => '09:00',
-            'content' => false,
+            'time' => '09:20',
+            'content' => true,
             'image' => 'welcome.png',
             'viewed' => false,
         ]);
