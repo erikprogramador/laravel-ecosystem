@@ -18,7 +18,7 @@
         @if(Route::has('login'))
             <div class="absolute pin-t pin-r mt-4 mr-4">
                 @auth
-                    <a href="{{ url('/home') }}" class="no-underline text-sm font-normal text-brand-dark uppercase">Home</a>
+                    <a href="{{ route('author') }}" class="no-underline text-sm font-normal text-brand-dark uppercase">Iniciar <i class="ml-2 fa fa-arrow-right"></i></a>
                 @else
                     <a href="{{ route('login') }}" class="no-underline text-sm font-normal text-brand-dark uppercase pr-6">Login</a>
                     <a href="{{ route('register') }}" class="no-underline inline-block text-sm font-bold bg-indigo text-white px-4 py-3 rounded-sm hover:bg-indigo-dark uppercase">Register</a>
@@ -32,6 +32,7 @@
                     <h1 class="text-grey-darker text-center font-hairline tracking-wide text-7xl mb-6">
                         {{ config('app.name', 'Laravel') }}
                     </h1>
+                    <h2 class="text-grey-darker text-center font-hairline tracking-wide text-3xl mb-6">Erik Vanderlei Fernandes</h2>
                 </div>
             </div>
         </div>
