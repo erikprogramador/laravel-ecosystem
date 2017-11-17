@@ -19,6 +19,7 @@ class CreateTopicsTable extends Migration
             $table->string('title');
             $table->string('time');
             $table->boolean('content')->default(false);
+            $table->string('content_type')->nullable();
             $table->string('link')->nullable();
             $table->string('image');
             $table->boolean('viewed')->default(false);

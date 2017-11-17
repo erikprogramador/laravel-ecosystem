@@ -36,6 +36,7 @@ class TopicsTableSeeder extends Seeder
             'slug' => 'welcome-2',
             'title' => 'Bem vindo',
             'time' => '09:20',
+            'link' => 'home',
             'content' => true,
             'image' => 'welcome.png',
             'viewed' => false,
