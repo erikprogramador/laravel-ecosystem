@@ -12,6 +12,7 @@
     "devDependencies": {
         "axios": "^0.17",
         "cross-env": "^5.1",
+        "font-awesome": "^4.7.0",
         "laravel-mix": "^1.0",
         "lodash": "^4.17.4",
         "tailwindcss": "^0.1.6",
