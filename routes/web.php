@@ -14,7 +14,8 @@
 Route::view('/', 'welcome');
 Route::get('manifesto', 'ManifestController@show')->name('manifest');
 
+Route::get('author', 'AuthorController@show')->name('author');
+
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
-

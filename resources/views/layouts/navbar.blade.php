@@ -14,7 +14,7 @@
                     <a href="{{ route('home') }}" class="text-grey-darker text-sm pr-4 no-underline">Conteudo</a>
                     <a href="{{ route('manifest') }}" class="text-grey-darker text-sm pr-4 no-underline">Manifesto</a>
 
-                    <span class="text-grey-darker text-sm pr-4 font-bold">{{ Auth::user()->name }}</span>
+                    <a href="{{ route('author') }}" class="text-grey-darker text-sm pr-4 font-bold no-underline">{{ Auth::user()->name }}</a>
 
                     <a href="{{ route('logout') }}"
                         class="no-underline text-grey-darker text-sm"
