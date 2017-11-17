@@ -21,16 +21,11 @@
             <div class="container mx-auto mb-8">
                 <div class="flex -mx-4">
                     <div class="md:w-3/4 mx-4">
-                       @yield('content') 
+                       @yield('content')
                     </div>
                     <div class="md:w-1/4 mx-4">
                         <a href="{{ route('home') }}" class="no-underline block bg-indigo px-4 py-3 text-center rounded text-white hover:bg-indigo-dark shadow-md">Inicio</a>
-                        <div class="mt-4 bg-white rounded overflow-hidden shadow-md">
-                            <a href="topic" class="block p-4 bg-indigo border-b border-indigo-lighest no-underline text-white">Topic 1</a>
-                            @for ($i = 0; $i <= 10; $i++)
-                                <a href="topic" class="block p-4 border-b border-indigo-lighest no-underline text-grey-dark hover:text-grey-darkest">Topic {{ $i }}</a>
-                            @endfor
-                        </div>
+                        @include('layouts.topics')
                     </div>
                 </div>
             </div>
